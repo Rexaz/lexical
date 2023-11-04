@@ -54,7 +54,7 @@ export function $generateHtmlFromNodes(
   selection?: RangeSelection | NodeSelection | GridSelection | null,
   dom?: Document,
 ): string {
-  if (typeof document === 'undefined' || && !dom) {
+  if (typeof document === 'undefined' && !dom) {
     throw new Error(
       'To use $generateHtmlFromNodes in headless mode please initialize a headless browser implementation such as JSDom and pass the document as the third argument.',
     );
